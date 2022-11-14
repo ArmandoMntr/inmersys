@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { TodoListApp } from "./TodoListApp";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <React.StrictMode>inmersys</React.StrictMode>
+    <React.StrictMode>
+        <TodoListApp />
+    </React.StrictMode>
 );
