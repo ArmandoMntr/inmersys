@@ -1,0 +1,19 @@
+$title-color: #94adcf;
+.completedTitle {
+    font-weight: 400;
+    color: $title-color;
+    font-size: 1.12em;
+    margin-top: 2em;
+    @media (min-width: 768px) {
+        margin: 1em 2em;
+        font-size: 1.75em;
+    }
+}
+.completedTasks {
+    @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5em 5em;
+        margin: 0 3em;
+    }
+}

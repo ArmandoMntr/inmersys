@@ -1,0 +1,10 @@
+.todoList {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5em 5em;
+        margin: 0 3em;
+    }
+}

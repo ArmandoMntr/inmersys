@@ -1,8 +1,10 @@
-export const TodoList = ({ todos }) => {
+import { TodoItem } from "./TodoItem";
+import "../styles/components/TodoList.scss";
+export const TodoList = ({ todos, onToggleTodo }) => {
     return (
-        <section>
+        <section className="todoList">
             {todos.map((todo) => (
-                <div key={todo.id}>{todo.description}</div>
+                <TodoItem key={todo.id} {...todo} onToggleTodo={onToggleTodo} />
             ))}
         </section>
     );

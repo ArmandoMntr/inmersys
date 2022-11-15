@@ -10,6 +10,7 @@ export const TodoAdd = ({ onNewTodo }) => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+        // checking if the input is not empty
         if (description.length <= 1) return;
 
         const todo = {
@@ -17,21 +18,27 @@ export const TodoAdd = ({ onNewTodo }) => {
             done: false,
             description,
         };
+        // sending todo to <TodoListApp/>
         onNewTodo(todo);
         onResetForm();
     };
     return (
-        <form className="todoAddForm" onSubmit={onFormSubmit}>
-            <input
-                placeholder="Add new task"
-                className="todoAddInput"
-                onChange={onInputChange}
-                name="description"
-                value={description}
-            />
-            <Button type="submit" className="todoAddButton">
-                <img src={arrowsvg} className="arrowsvg" />
-            </Button>
-        </form>
+        <div className="todoAddWrapper">
+            <form
+                className="todoAddForm mb-5 mt-4 align-items-center"
+                onSubmit={onFormSubmit}
+            >
+                <input
+                    placeholder="Add new task"
+                    className="todoAddInput"
+                    onChange={onInputChange}
+                    name="description"
+                    value={description}
+                />
+                <Button type="submit" className="todoAddButton">
+                    <img src={arrowsvg} className="arrowsvg" />
+                </Button>
+            </form>
+        </div>
     );
 };
